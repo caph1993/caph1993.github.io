@@ -15,13 +15,13 @@ export default <Switch key$={lang$.key$}>
     <ul>
       <li>These algorithms are equivalent for all {math`n \geq 2`} if and only if {math`p\in\{1,2,\infty\}`}:
         <ol>
-          <li>sample from the p-sphere, uniformly in the euclidean sense</li>
-          <li>sample from the p-volume, uniformly in the euclidean sense, and project the vector on the p-sphere</li>
-          <li>sample from the n-dimensional p-isotropic distribution and project the vector on the p-sphere</li>
-          <li>sample from the p-sphere, uniformly in the sense of the metric induced by the p-norm</li>
+          <li>sample the p-sphere, uniformly in the euclidean sense</li>
+          <li>sample the p-ball (volume), uniformly in the euclidean sense, and project the vector on the p-sphere</li>
+          <li>sample the n-dimensional p-isotropic distribution and project the vector on the p-sphere</li>
+          <li>sample the p-sphere, uniformly in the sense of the metric induced by the p-norm</li>
         </ol>
       </li>
-      <li>A distribution in n-dimensions is isotropic in the p-norm if and only if its density is given by {math`\[ f(x) = \frac{1}{D} \exp\left( -\frac{d\,\|\mathbf{x}\|_p^p}{p\,b^p} \right) \]`} for some scale {math`b>0`}, where {math`D = \left(\frac{b^d}{2p} (\frac{p}{d})^{\frac{d}{p}} \Gamma(\frac{d}{p})\right)^n`}.
+      <li>A distribution in n-dimensions {(math`n\geq 2`)} is isotropic in the p-norm if and only if its density is given by {math`\[ f(x) = \frac{1}{D} \exp\left( -\frac{d\,\|\mathbf{x}\|_p^p}{p\,b^p} \right) \]`} for some scale {math`b>0`}, where {math`D = \left(\frac{b^d}{2p} (\frac{p}{d})^{\frac{d}{p}} \Gamma(\frac{d}{p})\right)^n`}.
         <br />
         This converges to a uniform distribution in {math`(-b, b)^n`} as {math`p\to\infty`}.
       </li>
@@ -43,13 +43,13 @@ export default <Switch key$={lang$.key$}>
     <ul>
       <li>Estos algoritmos son equivalentes para todo {math`n \geq 2`} si y solo si {math`p\in\{1,2,\infty\}`}:
         <ol>
-          <li>muestrear de la p-esfera, uniformemente en el sentido euclidiano</li>
-          <li>muestrear del p-volumen, uniformemente en el sentido euclidiano, y proyectar el vector en la p-esfera</li>
-          <li>muestrear de la distribución p-isotrópica n-dimensional y proyectar el vector en la p-esfera</li>
-          <li>muestrear de la p-esfera, uniformemente en el sentido de la métrica inducida por la p-norma</li>
+          <li>muestrear la p-esfera, uniformemente en el sentido euclidiano</li>
+          <li>muestrear la p-bola (volumen), uniformemente en el sentido euclidiano, y proyectar el vector en la p-esfera</li>
+          <li>muestrear la distribución p-isotrópica n-dimensional y proyectar el vector en la p-esfera</li>
+          <li>muestrear la p-esfera, uniformemente en el sentido de la métrica inducida por la p-norma</li>
         </ol>
       </li>
-      <li>Una distribución en n-dimensiones es isotrópica en la norma p si y solo si su densidad está dada por {math`\[ f(x) = \frac{1}{D} \exp\left( -\frac{d\,\|\mathbf{x}\|_p^p}{p\,b^p} \right) \]`} para algún escala {math`b>0`}, donde {math`D = \left(\frac{b^d}{2p} (\frac{p}{d})^{\frac{d}{p}} \Gamma(\frac{d}{p})\right)^n`}.
+      <li>Una distribución en n-dimensiones {(math`n\geq 2`)} es isotrópica en la norma p si y solo si su densidad está dada por {math`\[ f(x) = \frac{1}{D} \exp\left( -\frac{d\,\|\mathbf{x}\|_p^p}{p\,b^p} \right) \]`} para algún escala {math`b>0`}, donde {math`D = \left(\frac{b^d}{2p} (\frac{p}{d})^{\frac{d}{p}} \Gamma(\frac{d}{p})\right)^n`}.
         <br />
         Esto converge a una distribución uniforme en {math`(-b, b)^n`} cuando {math`p\to\infty`}.
       </li>
@@ -72,13 +72,13 @@ export default <Switch key$={lang$.key$}>
     <ul>
       <li>Ces algorithmes sont équivalents pour tout {math`n \geq 2`} si et seulement si {math`p\in\{1,2,\infty\}`}:
         <ol>
-          <li>échantillonner de la p-sphère, uniformément au sens euclidien</li>
-          <li>échantillonner du p-volume, uniformément au sens euclidien, et projeter le vecteur sur la p-sphère</li>
-          <li>échantillonner de la distribution p-isotropique n-dimensionnelle et projeter le vecteur sur la p-sphère</li>
-          <li>échantillonner de la p-sphère, uniformément au sens de la métrique induite par la p-norme</li>
+          <li>échantillonner la p-sphère, uniformément au sens euclidien</li>
+          <li>échantillonner la p-balle (volume), uniformément au sens euclidien, et projeter le vecteur sur la p-sphère</li>
+          <li>échantillonner la distribution p-isotropique n-dimensionnelle et projeter le vecteur sur la p-sphère</li>
+          <li>échantillonner la p-sphère, uniformément au sens de la métrique induite par la p-norme</li>
         </ol>
       </li>
-      <li>Une distribution en n-dimensions est isotropique dans la norme p si et seulement si sa densité est donnée par {math`\[ f(x) = \frac{1}{D} \exp\left( -\frac{d\,\|\mathbf{x}\|_p^p}{p\,b^p} \right) \]`} pour une échelle {math`b>0`}, où {math`D = \left(\frac{b^d}{2p} (\frac{p}{d})^{\frac{d}{p}} \Gamma(\frac{d}{p})\right)^n`}.
+      <li>Une distribution en n-dimensions {(math`n\geq 2`)} est isotropique dans la norme p si et seulement si sa densité est donnée par {math`\[ f(x) = \frac{1}{D} \exp\left( -\frac{d\,\|\mathbf{x}\|_p^p}{p\,b^p} \right) \]`} pour une échelle {math`b>0`}, où {math`D = \left(\frac{b^d}{2p} (\frac{p}{d})^{\frac{d}{p}} \Gamma(\frac{d}{p})\right)^n`}.
         <br />
         Cela converge vers une distribution uniforme dans {math`(-b, b)^n`} lorsque {math`p\to\infty`}.
       </li>
@@ -100,13 +100,13 @@ export default <Switch key$={lang$.key$}>
     <ul>
       <li>Diese Algorithmen sind für alle {math`n \geq 2`} äquivalent, wenn und nur wenn {math`p\in\{1,2,\infty\}`}:
         <ol>
-          <li>aus der p-Sphäre, gleichmäßig im euklidischen Sinne, auswählen</li>
-          <li>aus dem p-Volumen, gleichmäßig im euklidischen Sinne, auswählen und den Vektor auf die p-Sphäre projizieren</li>
+          <li>aus der p-Einheitssphäre, gleichmäßig im euklidischen Sinne, auswählen</li>
+          <li>aus dem p-Einheitskugel (Volumen), gleichmäßig im euklidischen Sinne, auswählen und den Vektor auf die p-Sphäre projizieren</li>
           <li>aus der n-dimensionalen p-isotropischen Verteilung auswählen und den Vektor auf die p-Sphäre projizieren</li>
-          <li>aus der p-Sphäre, gleichmäßig im Sinne der Metrik, die durch die p-Norm induziert wird, auswählen</li>
+          <li>aus der p-Einheitssphäre, gleichmäßig im Sinne der Metrik, die durch die p-Norm induziert wird, auswählen</li>
         </ol>
       </li>
-      <li>Eine Verteilung in n-Dimensionen ist isotrop in der p-Norm, wenn und nur wenn ihre Dichte durch {math`\[ f(x) = \frac{1}{D} \exp\left( -\frac{d\,\|\mathbf{x}\|_p^p}{p\,b^p} \right) \]`} für eine Skala {math`b>0`} gegeben ist, wobei {math`D = \left(\frac{b^d}{2p} (\frac{p}{d})^{\frac{d}{p}} \Gamma(\frac{d}{p})\right)^n`}.
+      <li>Eine Verteilung in n-Dimensionen {(math`n\geq 2`)} ist isotrop in der p-Norm, wenn und nur wenn ihre Dichte durch {math`\[ f(x) = \frac{1}{D} \exp\left( -\frac{d\,\|\mathbf{x}\|_p^p}{p\,b^p} \right) \]`} für eine Skala {math`b>0`} gegeben ist, wobei {math`D = \left(\frac{b^d}{2p} (\frac{p}{d})^{\frac{d}{p}} \Gamma(\frac{d}{p})\right)^n`}.
         <br />
         Dies konvergiert zu einer gleichmäßigen Verteilung in {math`(-b, b)^n`} für {math`p\to\infty`}.
       </li>
