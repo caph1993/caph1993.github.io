@@ -4,6 +4,7 @@ import { RadioGroup, Switch } from './cpComponents';
 import { lang$, Translations } from './language';
 import { SwitchMore } from './SwitchMore';
 
+import ProjectIsotropic from './projects/ProjectIsotropic';
 
 const RadioPlayer = (name$, href) => {
   const button = <button>{name$.textNode || name$}</button>;
@@ -57,12 +58,9 @@ const ProjectsBody = () => <div>
     {
       // import('./2022-AI-style').then(m => m.default)
     }
-    {AsyncComponent((async () => {
-      const module = await import('./projects/ProjectIsotropic');
-      return <div class="project" data-case="Publications">
-        {module.default}
-      </div>
-    })())}
+    <div class="project" data-case="Publications">
+      {ProjectIsotropic}
+    </div>
 
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>

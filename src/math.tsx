@@ -27,6 +27,7 @@ export function math(htmlTemplateString: TemplateStringsArray, ...variables) {
 }
 
 
+
 export const katexFactory = new class {
   queue: { elem: ChildNode, formula: string, displayMode?: boolean, macros?: any, onLoad?: (Node) => any }[];
   isLoading: boolean;
@@ -50,7 +51,7 @@ export const katexFactory = new class {
   _render(formula: string, { displayMode = false, macros = null }) {
     macros = macros || this.macros;
     const katex = assertNotUndefined(window['katex']);
-    const out = <span></span>;
+    const out = <span></span> as any;
     try {
       katex.render(formula, out, { displayMode, macros });
     } catch (err) {
@@ -63,14 +64,17 @@ export const katexFactory = new class {
   async untilKatex() {
     if (window['katex'] || this.isLoading) return;
     this.isLoading = true;
-    $('head').append(<> <link rel="stylesheet" href="static/lib/katex/katex.min.css" /></>);
+    $('head').append(<> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" /></>);
+    // (async () => {
+    //   window['katex'] = (await import('katex'));
+    // })()
     $('head').append(<style>{`
       .katex{
         font-size: inherit;
         color: inherit;
       }
     `}</style>);
-    await untilScript("static/lib/katex/katex.min.js");
+    await untilScript("https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js");
     this.isLoading = false;
     while (this.queue.length) { // Process elements in FIFO order:
       const { elem, formula, onLoad, ...options } = this.queue.shift();
