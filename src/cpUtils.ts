@@ -453,12 +453,10 @@ type AsyncComponentType = {
 };
 export const AsyncComponent: AsyncComponentType = (elem, tmp?) => {
   if (typeof elem === 'function') return AsyncComponent(elem(), tmp);
-  elem = asPromise(elem);
   tmp = asReplaceableNode(tmp);
-  elem.then(value => {
+  asPromise(elem).then(value => {
     const newElem = asReplaceableNode(value);
     tmp.replaceWith(newElem);
-    tmp.replaceWith = (newNode) => newElem.replaceWith(newNode);
   });
   return tmp;
 }

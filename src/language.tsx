@@ -1,6 +1,7 @@
 //@ts-check
 import { FunctionComponent } from 'jsx-dom';
 import { RX } from './cpUtils';
+import { Switch } from './cpComponents';
 
 interface Language {
   key: string, name: string, short: string, country: string,
@@ -85,33 +86,9 @@ export const LanguageSwitch = ({ children }) => {
   return component;
 }
 
-export const Switch: FunctionComponent<{ key$: RX<any> }> = ({ key$, children }) => {
-  const childrenList = [...$(<div>{children}</div>).children()];
-  const component = <>{children}</>;
-  const childrenItems = childrenList.map(child => ({
-    caseKey: (child.attributes || {})['data-case']?.value,
-    isDefault: !!(child.attributes || {})['default'],
-    elem: child,
-  }));
-  key$.subscribe(key => {
-    const anyMatch = childrenItems.filter(({ caseKey }) => caseKey == key).length > 0;
-    for (let { caseKey, isDefault, elem } of childrenItems) {
-      let show: boolean;
-      if (key === true) show = true;
-      else if (key === false) show = false;
-      else if (!caseKey || caseKey == key) show = true;
-      else if (!anyMatch && isDefault) show = true;
-      else show = false;
-      $(elem).toggle(show);
-    }
-  });
-  return component;
-}
-
-
 
 export const Translations = ({ en, es, de, fr, children }: { en?: string, es?: string, de?: string, fr?: string, children?: any }) => {
-  return <Switch key$={lang$.key$}>
+  return <Switch key$={lang$.key$} span>
     {en && (<span data-case="en">{en}</span>)}
     {es && (<span data-case="es">{es}</span>)}
     {fr && (<span data-case="fr">{fr}</span>)}

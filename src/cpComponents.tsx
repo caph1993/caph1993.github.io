@@ -6,11 +6,13 @@ $('<style>').html(`
 }`).appendTo('head');
 
 
-export const Switch = ({ key$, children }) => {
+export const Switch = ({ key$, children, span = false }) => {
   children = Array.isArray(children) ? children : children ? [children] : [];
+  const fragment = span ? <span>{children}</span> : <div>{children}</div>; // At the end, I needed a div to wrap the children
+  if (span) console.log('span', fragment);
   key$.subscribe(key => {
     // Filter out strings and non-elements
-    const elems = children.filter(child => child.attributes).map(child => ({
+    const elems = Array.from(fragment.children).filter(child => child.attributes).map(child => ({
       caseKey: (child.attributes || {})['data-case']?.value,
       isDefault: !!(child.attributes || {})['data-default'],
       elem: child,
@@ -26,8 +28,10 @@ export const Switch = ({ key$, children }) => {
       $(elem).toggle(show);
     }
   });
-  return <>{children}</>;
+  return fragment;
 }
+
+
 
 
 // tab effects: https://alvarotrigo.com/blog/html-css-tabs/

@@ -14,14 +14,14 @@ const Course = ({ code, names, children }) => {
   return <CourseTag><CourseCode>{code}</CourseCode>{name}{children}</CourseTag>;
 }
 
-const syllabus = (href) => <Switch key$={lang$.key$}>
+const syllabus = (href) => <Switch key$={lang$.key$} span>
   <a href={href} data-case="en">Course syllabus</a>
   <a href={href} data-case="es">Programa del curso</a>
   <a href={href} data-case="de">Inhalt des Unterrichts</a>
   <a href={href} data-case="fr">Contenu du cours</a>
 </Switch>
 
-const officialWebsite = (href) => <Switch key$={lang$.key$}>
+const officialWebsite = (href) => <Switch key$={lang$.key$} span>
   <a href={href} data-case="es">Página web oficial</a>
   <a href={href} data-case="en">Official webpage</a>
   <a href={href} data-case="de">Offizielle Webseite</a>
@@ -67,7 +67,7 @@ const TeachingBody = () => <>
           de="Wiki des Unterrichts"
           fr="Wiki du cours">
         </Translations>
-      </a>,
+      </a>
     </div>
     {officialWebsite('http://www.camilorocha.info/teaching/agra/2019-2]')}
   </Course>
