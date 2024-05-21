@@ -1,7 +1,7 @@
 {
 	"scripts": {
 		"install": "pnpm install --ignore-scripts",
-		"build": "webpack --config webpack.config.js",
+		"build": "webpack --config webpack.config.js && cp -r static dist",
 		"webpack-watch": "env-cmd webpack --config webpack.config.js --watch",
 		"dev": "NODEMON_PID=$$ nodemon --watch webpack.config.js --exec \"pnpm run webpack-dev\"",
 		"webpack-dev": "env-cmd webpack serve --config webpack.config.js"

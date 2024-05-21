@@ -1,12 +1,12 @@
 import { math } from '../math';
-import { lang$, Translations } from '../language';
-import { RadioGroup, Switch } from '../cpComponents';
+import { lang$ } from '../language';
+import { Switch } from '../cpComponents';
 
 let url = 'https://scholar.google.com.co/citations?view_op=view_citation&hl=en&user=hoQx1RIAAAAJ&citation_for_view=hoQx1RIAAAAJ:7PzlFSSx8tAC';
 
 export default <Switch key$={lang$.key$}>
   <div data-case="en" data-default>
-    <b>2024 - Isotropic distributions in the p-norm <a href={url}>(see the paper)</a></b>
+    <h2>2024 - Isotropic distributions in the p-norm <a href={url}>(see the paper)</a></h2>
     <p>
       Paper about the generation of random vectors on the n-dimensional unit p-sphere (surface) in such a way that their direction is "uniform".
       {' '}

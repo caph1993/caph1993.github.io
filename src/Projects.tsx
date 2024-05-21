@@ -65,7 +65,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2023-2024 - nDArray-JS </b><a href="https://github.com/caph1993/ndarray-js">(repository)</a>
+          <h2>2023-2024 - nDArray-JS <a href="https://github.com/caph1993/ndarray-js">(repository)</a></h2>
           <p>
             Like numpy, but in javascript. This is a library under development for working with n-dimensional arrays in javascript.
             Main features:
@@ -82,7 +82,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2023 - (NLP) mobileBERT demo</b>
+          <h2>2023 - (NLP) mobileBERT demo</h2>
         </div>
       </Switch>
       <ul>{[<a href="https://github.com/caph1993/mobileBERT">[video and repository]</a>].map(x => <li>{x}</li>)}</ul>
@@ -91,7 +91,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2022 - AI rnn-piano mirror</b>
+          <h2>2022 - AI rnn-piano mirror</h2>
         </div>
       </Switch>
       <ul>{[
@@ -106,7 +106,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2022 - Radio list`}</b>
+          <h2>{`2022 - Radio list`}</h2>
         </div>
       </Switch>
       <ul>{[
@@ -146,7 +146,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Publications">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2022 - Causal Discovery for Fairness`}</b>
+          <h2>{`2022 - Causal Discovery for Fairness`}</h2>
         </div>
       </Switch>
       <ul>{[
@@ -170,7 +170,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Publications">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2022 - On the impossibility of non-trivial accuracy under fairness constraints</b>
+          <h2>2022 - On the impossibility of non-trivial accuracy under fairness constraints</h2>
         </div>
       </Switch>
       <ul>{[
@@ -187,7 +187,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2022 -`}<code>avispa-lattices</code></b>
+          <h2>{`2022 -`}<code>avispa-lattices</code></h2>
         </div>
       </Switch>
       <ul>{[
@@ -211,7 +211,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Publications">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2021 - Computing Distributed Knowledge as the Greatest Lower Bound of Knowledge</b>
+          <h2>2021 - Computing Distributed Knowledge as the Greatest Lower Bound of Knowledge</h2>
         </div>
       </Switch>
       <ul>{[].map(x => <li>{x}</li>)}</ul>
@@ -219,7 +219,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2019 - <code>xscreenfilter</code></b>
+          <h2>2019 - <code>xscreenfilter</code></h2>
           <br />
           Command line tool for changing screen brightness and temperature through console and therefore hotkeys.
           [<a href="https://github.com/caph1993/xscreenfilter">repository</a>].
@@ -233,7 +233,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Publications">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2019 - Make Puzzles Great Again`}</b>
+          <h2>{`2019 - Make Puzzles Great Again`}</h2>
         </div>
       </Switch>
       <ul>{[].map(x => <li>{x}</li>)}</ul>
@@ -241,7 +241,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Publications">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2020 - Algorithmic Analysis of Blockchain Efficiency with Communication Delay`}</b>
+          <h2>{`2020 - Algorithmic Analysis of Blockchain Efficiency with Communication Delay`}</h2>
         </div>
       </Switch>
       <ul>{[].map(x => <li>{x}</li>)}</ul>
@@ -249,7 +249,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2020 - <code>caph-docs</code></b>
+          <h2>2020 - <code>caph-docs</code></h2>
         </div>
       </Switch>
       <ul>{[].map(x => <li>{x}</li>)}</ul>
@@ -257,7 +257,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2020 - <code>amigo-cp</code></b>
+          <h2>2020 - <code>amigo-cp</code></h2>
         </div>
       </Switch>
       <ul>{[].map(x => <li>{x}</li>)}</ul>
@@ -265,7 +265,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Publications">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2020 - Master thesis`}</b>
+          <h2>{`2020 - Master thesis`}</h2>
         </div>
       </Switch>
     </div>
@@ -274,7 +274,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Enterprise">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2019 - ABC2 dashboard (enterprise project)`}</b>
+          <h2>{`2019 - ABC2 dashboard (enterprise project)`}</h2>
         </div>
       </Switch>
       <ul>{[
@@ -291,7 +291,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Enterprise">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2019 - Uigo (entrepeneurship)`}</b>
+          <h2>{`2019 - Uigo (entrepeneurship)`}</h2>
         </div>
       </Switch>
       <ul>{[
@@ -311,7 +311,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Personal">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <><b>2019 - <code>caph.info</code></b></>,
+          <><h2>2019 - <code>caph.info</code></h2></>,
         </div>
       </Switch>
       <ul>{[`Also tiddly wiki and tiddly wiki plugin`].map(x => <li>{x}</li>)}</ul>
@@ -319,7 +319,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Enterprise">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2018 - Anonylitics (enterprise project)`}</b>
+          <h2>{`2018 - Anonylitics (enterprise project)`}</h2>
         </div>
       </Switch>
       <ul>{[
@@ -336,7 +336,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Enterprise">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2017 - LNG forecast (internship)`}</b>
+          <h2>{`2017 - LNG forecast (internship)`}</h2>
         </div>
       </Switch>
       <ul>{[
@@ -353,7 +353,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Publications">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>{`2016 - Double-spend attack models with time advantage for Bitcoin`}</b>
+          <h2>{`2016 - Double-spend attack models with time advantage for Bitcoin`}</h2>
         </div>
       </Switch>
       <ul>{[
@@ -370,7 +370,7 @@ const ProjectsBody = () => <div>
       ].map(x => <li>{x}</li>)}</ul>
 
       <div data-case="es">
-        <b>{`2016 - Modelos para ataques tipo doble-gasto con ventaja temporal para Bitcoin`}</b>
+        <h2>{`2016 - Modelos para ataques tipo doble-gasto con ventaja temporal para Bitcoin`}</h2>
         <ul>{[
           <>
             Escrito con Dr. Camilo Rocha. Presentado en CLEI-2016. Publicado en ENTCS.
@@ -434,7 +434,7 @@ const ProjectsBody = () => <div>
     <div class="project" data-case="Publications">
       <Switch key$={lang$.key$}>
         <div data-case="en" data-default>
-          <b>2015 - Ad-compact spaces (mathematics graduation project)</b>
+          <h2>2015 - Ad-compact spaces (mathematics graduation project)</h2>
           <ul>
             <li>
               Final research project for obtaining the mathematics BS. Supervised by Dr. Raúl Pachón.
@@ -445,7 +445,7 @@ const ProjectsBody = () => <div>
           </ul>
         </div>
         <div data-case="es">
-          <b>2015 - Espacios ad-compactos</b>
+          <h2>2015 - Espacios ad-compactos</h2>
           <ul>
             <li>
               Supervisado por el Dr. Raúl Pachón. Trabajo final de investigación para obtener el título de matemático.
