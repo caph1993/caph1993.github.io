@@ -64,6 +64,22 @@ jobs:
           asset_path: ./dist.tar.gz
           asset_name: dist.tar.gz
           asset_content_type: application/gzip
+      
+      - name: Get releases
+        id: releases
+        run: |
+          curl -s https://api.github.com/repos/${{ github.repository }}/releases | jq '.[].id' > release_ids.txt
+
+      - name: Delete old releases
+        run: |
+          # Adjust this to your criteria for "old" releases, e.g., keep the latest 3
+          releases_to_delete=$(tail -n +4 release_ids.txt)  # Delete releases older than the latest 3
+          for release_id in $releases_to_delete; do
+            curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/releases/$release_id
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Deploy to GitHub Pages
       #   uses: peaceiris/actions-gh-pages@v3
