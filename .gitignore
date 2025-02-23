@@ -6,3 +6,4 @@ vendor
 node_modules
 .webpack.lock
 dist
+latest_version.txt
