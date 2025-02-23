@@ -34,8 +34,15 @@ jobs:
         id: timestamp
         run: echo "TAG_NAME=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
 
+      # - name: Create a release archive
+      #   run: tar -czf dist.tar.gz dist
+
       - name: Create a release archive
-        run: tar -czf dist.tar.gz dist
+        run: |
+          mkdir tmp-dist
+          mv dist tmp-dist/dist
+          tar -czf dist.tar.gz -C tmp-dist dist
+          rm -rf tmp-dist
 
       - name: Create GitHub release
         id: create_release
