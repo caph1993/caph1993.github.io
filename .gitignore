@@ -4,6 +4,11 @@ _site
 .jekyll-metadata
 vendor
 node_modules
-.webpack.lock
-dist
-latest_version.txt
+/.webpack.lock
+/.webpack.dev.lock
+/dist
+/latest_version.txt
+# Add this to your .gitignore
+/.pnp.cjs
+/.pnp.loader.mjs
+/.yarn
