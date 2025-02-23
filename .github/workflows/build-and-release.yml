@@ -18,17 +18,14 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Install Yarn
+        run: npm install -g yarn
 
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
 
       - name: Build the project
-        run: pnpm build
-
-      - name: List files before tar
-        run: ls -R
+        run: yarn build
 
       - name: Generate timestamp
         id: timestamp
@@ -43,6 +40,9 @@ jobs:
           mv dist tmp-dist/dist
           tar -czf dist.tar.gz -C tmp-dist dist
           rm -rf tmp-dist
+
+      - name: List files
+        run: ls -R
 
       - name: Create GitHub release
         id: create_release
