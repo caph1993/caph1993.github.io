@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up Node.js
+
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
-        
-      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
-      - run: export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-      - run: yarn set version stable
+          node-version: 20
+          cache: 'yarn'
+      # FIXME: Because the setup-node action is dumb, we have to manually
+      #        install the dependencies ourselves. See: https://github.com/actions/setup-node/issues/182#issuecomment-2209831175
+      - name: Install dependencies
+        run: yarn install
 
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - run: yarn install
       - run: yarn build
 
       - name: Generate timestamp
