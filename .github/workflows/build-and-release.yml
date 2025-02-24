@@ -20,7 +20,7 @@ jobs:
 
       - name: Generate timestamp
         id: timestamp
-        run: echo "TAG_NAME=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
+        run: echo "TAG_NAME=$(date +'%Y.%m.%d-%Hh%Mm%Ss')" >> $GITHUB_ENV
 
       # - name: Create a release archive
       #   run: tar -czf dist.tar.gz dist
