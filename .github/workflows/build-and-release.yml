@@ -18,14 +18,10 @@ jobs:
         with:
           node-version: '18.x'
         
-      - name: Set up Yarn
-        run: |
-          curl -o- -L https://yarnpkg.com/install.sh | bash
-          export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-          yarn set version stable
-
-      - name: Install dependencies
-        run: yarn install
+      - name: Install yarn and run yarn install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
 
       - name: Build the project
         run: yarn build
