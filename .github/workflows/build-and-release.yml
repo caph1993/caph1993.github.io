@@ -10,18 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Yarn PnP Setup
+        uses: Araxeus/setup-yarn-pnp-action@v1
 
       - uses: actions/checkout@v4
-
-      # See: https://github.com/actions/setup-node/issues/182
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: 'yarn'
-      - name: Install dependencies
-        run: yarn install
-
+      
       - run: yarn build
 
       - name: Generate timestamp
