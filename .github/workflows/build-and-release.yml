@@ -13,13 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # - name: Set up Yarn
-      #   run: |
-      #     curl -o- -L https://yarnpkg.com/install.sh | bash
-      #     export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-      - name: Setup Yarn
-        uses: threeal/setup-yarn-action@stable
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+        
+      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
+      - run: export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+      - run: yarn set version stable
 
       - run: yarn install
       - run: yarn build
