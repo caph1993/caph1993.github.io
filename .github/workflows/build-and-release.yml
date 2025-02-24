@@ -13,13 +13,18 @@ jobs:
 
       - uses: actions/checkout@v4
 
+      - run: npm -g i yarn
+
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: 'yarn'
+          # cache: 'yarn'
       # FIXME: Because the setup-node action is dumb, we have to manually
       #        install the dependencies ourselves. See: https://github.com/actions/setup-node/issues/182#issuecomment-2209831175
+      
+      - run: yarn set version stable
+      
       - name: Install dependencies
         run: yarn install
 
