@@ -13,18 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Yarn setup
+        uses: DerYeger/yarn-setup-action@master
         with:
-          node-version: '18.x'
-        
-      - name: Install yarn and run yarn install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
+          node-version: 22
 
-      - name: Build the project
-        run: yarn build
+      - run: yarn install
+      - run: yarn build
 
       - name: Generate timestamp
         id: timestamp
