@@ -147,18 +147,21 @@ const HomeBody = () => <>
   <h2>Curriculum vitae</h2>
   <ul style="margin-top:1em;margin-bottom:1.8em;">
     <li>
-      🇺🇸 2023/10:{' '}
-      <a download href="static/profile/Resume.pdf">CV in English</a>
+      🇺🇸 2025/10:{' '}
+      <a download href="https://drive.google.com/file/d/1tPIAwDVY_eTpDB641fayBxBVn2e44y-V/view?usp=sharing">CV in English</a>
     </li>
     <li>
-      🇨🇴 2020/05:{' '}
-      <a download href="static/profile/Hoja-de-vida.pdf">Hoja de vida en Español</a>
+      🇨🇴 2025/10:{' '}
+      <a download href="https://drive.google.com/file/d/1DRIQH7hGbrS1JJDf1FT6p8koG__KJDm-/view?usp=sharing">Hoja de vida en Español</a>
     </li>
     <li>
-      🇩🇪 2017/12:{' '}
-      <a download href="static/profile/Lebenslauf.pdf">Lebenslauf auf Deutsch</a>
+      🇫🇷 2025/10:{' '}
+      <a download href="https://drive.google.com/file/d/160SwwseNj1qgJNYIuNTn-8XAPrmkTKOp/view?usp=sharing">CV en Français</a>
     </li>
-    {/* {🇫🇷} */}
+    <li>
+      🇩🇪 2025/10:{' '}
+      <a download href="https://drive.google.com/file/d/17wxVvzEmzz2qXpZYIiIq1w3YMOlmAOfj/view?usp=sharing">Lebenslauf auf Deutsch</a>
+    </li>
   </ul>
   <hr />
 </>;
